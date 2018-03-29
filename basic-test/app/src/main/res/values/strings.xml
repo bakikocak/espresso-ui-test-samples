@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Espresso Basic Test</string>
+    <string name="click">CLICK!</string>
+    <string name="messageText">Welcome to Espresso!</string>
+</resources>
