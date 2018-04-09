@@ -26,7 +26,7 @@ public class MainActivityTest {
 
     @Test
     public void selectAnItem_shouldDisplayTextView(){
-
+        //onData should be used when we test an adapterView
         onData(withData(4)).
                 inAdapterView(withId(R.id.listview))
                 .perform(click());
@@ -37,11 +37,12 @@ public class MainActivityTest {
 
     }
 
+    // Custom matcher to check the item with the data specified.
     private Matcher<Object> withData(final int i) {
         return new BoundedMatcher<Object,Item>(Item.class) {
             @Override
             public void describeTo(Description description) {
-                description.appendText("has value of " + i);
+                description.appendText("with the value " + i);
             }
 
             @Override
